@@ -16,12 +16,12 @@ class StorePicker extends React.Component {
     return (
       <React.Fragment>
         <form action="" className="store-selector" onSubmit={this.goToStore}>
-          <h2>Please Enter Your Supplement</h2>
+          <h2>Please Enter Your Store Name</h2>
           <input
             type="text"
             ref={this.myInput}
             required
-            placeholder="Supplement Name"
+            placeholder="Store Name"
             defaultValue={getFunName()}
           />
           <button type="submit">Get Details →</button>
