@@ -5,7 +5,14 @@ class Order extends React.Component {
   renderOrder = (key) => {
     const fish = this.props.fishes[key];
     const count = this.props.order[key];
-    const isAvailable = fish.status === 'available';
+
+    // First check if there is a fish, then check if it is available.
+    // Since the data is coming from a database, it takes a split second for it to load into the app. We cannot check for the status of something that doesn't exist yet.
+    const isAvailable = fish && fish.status === 'available';
+
+    // Make sure the fish is loaded before we continue
+    if (!fish) return null;
+
     if (!isAvailable) {
       return (
         <li key={key}>
