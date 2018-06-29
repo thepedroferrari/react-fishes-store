@@ -115,7 +115,7 @@ ul.order
   // Default state
   li
     border-bottom 1px solid black
-    padding 2rem 0
+    padding 2rem 0 1rem
     display flex
     font-size 1.4rem
     justify-content space-between
@@ -126,9 +126,10 @@ ul.order
         display inline
     button
       border 0
-      display none
-      line-height 1
-      padding 0
+      line-height 2
+      padding 0 10px
+      float:right
+      transform translateY(-.5rem)
     &.total
       font-weight 600
       border-bottom 3px solid black
@@ -138,6 +139,8 @@ ul.order
       background lighten(red, 80%)
     .price
       font-size 1.2rem
+    >span
+      width: 100%
     span.count
       position relative
       overflow hidden

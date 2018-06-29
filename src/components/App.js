@@ -85,7 +85,6 @@ class App extends React.Component {
     const order = {...this.state.order};
     // 2. Either add to the order, or update the number in our order
     if (order[key] < 2 ) {
-      console.log(order[key]);
       delete order[key];
       this.setState({ order });
     } else {
