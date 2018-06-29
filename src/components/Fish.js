@@ -1,7 +1,19 @@
 import React from 'react';
+import PropTyoes from "prop-types";
 import { formatPrice } from '../helpers';
 
 class Fish extends React.Component {
+  static propTypes = { // static = don't make a copy for each iteration.
+    detail: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      desc: PropTypes.string,
+      status: PropTypes.string,
+      price: PropTypes.number,
+    }),
+    addToOrder: PropTypes.func,
+    deleteFish: PropTypes.func
+  }
   render() {
     // ES6 Destructuring
     const { image, name, price, status, desc } = this.props.details;
