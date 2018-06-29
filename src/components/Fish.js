@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTyoes from "prop-types";
+import PropTypes from "prop-types";
 import { formatPrice } from '../helpers';
 
 class Fish extends React.Component {
