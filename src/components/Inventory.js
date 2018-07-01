@@ -8,7 +8,7 @@ import base, { firebaseApp } from '../base';
 
 class Inventory extends React.Component {
   static propTypes = {
-    fishes: PropTypes.Object,
+    fishes: PropTypes.object,
     updateFish: PropTypes.func,
     deleteFish: PropTypes.func,
     loadSampleFishes: PropTypes.func,

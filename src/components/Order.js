@@ -5,8 +5,8 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class Order extends React.Component {
   static propTypes = {
-    fishes: PropTypes.Object,
-    order: PropTypes.Object,
+    fishes: PropTypes.object,
+    order: PropTypes.object,
     removeFromOrder: PropTypes.func,
   }
   renderOrder = (key) => {
